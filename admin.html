@@ -16,6 +16,9 @@ DO NOT LINK THIS PAGE
       <link rel="stylesheet" href="stylesheet/admincss.css">
     </head>
     <body>
+        <input id="email" placeholder="Email">
+        <input id="pass" placeholder="Password" type="password">
+        <button onclick="login()" id="loginbtn">Login</button>
       <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
       <script>
         // Initialize Firebase
@@ -59,11 +62,7 @@ DO NOT LINK THIS PAGE
           document.getElementById('#loginbtn').disabled = true;
         }  
       </script>
-      <div class="container">
-        <input id="email" placeholder="Email">
-        <input id="pass" placeholder="Password" type="password">
-        <button onclick="login()" id="loginbtn">Login</button>
-      </div>
+      
     </body>    
   </html> 
 
