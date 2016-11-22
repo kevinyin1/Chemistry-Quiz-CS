@@ -34,8 +34,8 @@ DO NOT LINK THIS PAGE
         firebase.initializeApp(config);
        
         // Contants
-        const email = $('#email').val();
-        const pass = $('#pass').val();
+        const email = document.getElementByID('#email').value;
+        const pass = document.getElementByID('#pass').value;
         const auth = firebase.auth();
         
         //
