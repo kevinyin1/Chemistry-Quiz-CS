@@ -16,11 +16,6 @@ DO NOT LINK THIS PAGE
       <link rel="stylesheet" href="stylesheet/admincss.css">
     </head>
     <body>
-      <div class="container">
-        <input id="email" placeholder="Email">
-        <input id="pass" placeholder="Password" type="password">
-        <button onclick="login()" id="loginbtn">Login</button>
-      </div>
       <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
       <script>
         // Initialize Firebase
@@ -34,8 +29,8 @@ DO NOT LINK THIS PAGE
         firebase.initializeApp(config);
        
         // Contants
-        const email = document.getElementByID('#email').value();
-        const pass = document.getElementByID('#pass').value();
+        const email = document.getElementById('#email').value();
+        const pass = document.getElementById('#pass').value();
         const auth = firebase.auth();
         
         //
@@ -62,12 +57,16 @@ DO NOT LINK THIS PAGE
               alert(errorMessage);
             }
             console.log(error);
-            document.getElementbyId('#loginbtn').disabled = false;
+            document.getElementById('#loginbtn').disabled = false;
           });
-          document.getElementbyId('#loginbtn').disabled = true;
+          document.getElementById('#loginbtn').disabled = true;
         }  
       </script>
-
+      <div class="container">
+        <input id="email" placeholder="Email">
+        <input id="pass" placeholder="Password" type="password">
+        <button onclick="login()" id="loginbtn">Login</button>
+      </div>
     </body>    
   </html> 
 
