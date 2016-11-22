@@ -1,6 +1,17 @@
 <!doctype html>
   <html>
     <head>
+      <style>
+        #c1{
+          padding:200px;
+          
+        }
+        #HomeP{
+          border-style:solid;
+          background-color:#f5f5f5;
+        }
+      </style>
+      
       <title>Ionic Four</title>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,14 +26,57 @@
       <link rel="stylesheet" href="stylesheet/main.css">  
 
   </head>
-    <body>
-      <div class="navbar">
-        Navigation Bar Goes here
-      </div>
-      <div class="container-fluid">
+    
+      <body>
+        <!--btw im not sure when to use div so yea-->
+          <!--nav bar-->
+          <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">what do we put here</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="test.html">Test</a></li>
+                <li><a href="about.html">About</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!--nav bar end-->
+
+          <div class="container-fluid text-center" id="c1">
+            <h1>Chemistry</h1>
+          </div>
+
+          <!--topic p-->
+
+          <div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" id="HomeP"> <p style="text-align:center"> Stuff about the site and stuff </p> </div>
+            <div class="col-sm-4"></div>
+          </div>
+          <!--end topic p-->
+
+          <!-- images -->
+          <div id="images">
+            <div class="row">
+              <div class="col-sm-4"> <a href="#"> <img src="#" class="img-rounded" alt="topic1"></a> </div>
+              <div class="col-sm-4"> <a href="#"> <img src="#" class="img-rounded" alt="topic2"></a> </div>
+              <div class="col-sm-4"> <a href="#"> <img src="#" class="img-rounded" alt="topic3"></a> </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"> <a href="#"> <img src="#" class="img-rounded pull-right" alt="topic4"></a> </div>
+              <div class="col-sm-6"> <a href="#"> <img src="#" class="img-rounded pull-left" alt="topic5"></a> </div>
+            </div>
+          </div>
+          <!-- images end -->
+
+  </body>
+
       
-      </div>  
-    </body>
+        
+    
   </html>
 
 
