@@ -28,10 +28,12 @@ DO NOT LINK THIS PAGE
         };
         firebase.initializeApp(config);
        
+        var email = "";
+        var pass = "";
 
         function login(){
-          const email = document.getElementById('#email').value;
-          const pass = document.getElementById('#pass').value;
+          email = document.getElementById('#email').value;
+          pass = document.getElementById('#pass').value;
           const auth = firebase.auth();
           //signout user
           if (auth.currentUser){
