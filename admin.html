@@ -29,8 +29,8 @@ DO NOT LINK THIS PAGE
         firebase.initializeApp(config);
 
         function login(){
-          var email = document.getElementById('#email').value();
-          var pass = document.getElementById('#pass').value();
+          var email = document.getElementById('#email').value;
+          var pass = document.getElementById('#pass').value;
           const auth = firebase.auth();
           //signout user
           if (auth.currentUser){
