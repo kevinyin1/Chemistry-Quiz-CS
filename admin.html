@@ -27,13 +27,10 @@ DO NOT LINK THIS PAGE
           messagingSenderId: "70741320633"
         };
         firebase.initializeApp(config);
-       
-        var email = "";
-        var pass = "";
 
         function login(){
-          email = document.getElementById('#email').value();
-          pass = document.getElementById('#pass').value();
+          var email = document.getElementById('#email').value();
+          var pass = document.getElementById('#pass').value();
           const auth = firebase.auth();
           //signout user
           if (auth.currentUser){
