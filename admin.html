@@ -65,7 +65,7 @@ DO NOT LINK THIS PAGE
 					  $('#logout').removeClass('hide');
 					  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 					  document.getElementById('output').innerHTML = '<div class="panel panel-default"><div class="panel-heading">Heading<button onclick="update()" class="btn btn-primary" id="update">Update</button></div><div class="panel-body">A Basic Panel</div></div>';
-					  document.getElementById('output').style.marginTop = ((screen.height)-(document.getElementById('container').style.height)).toString()+"px";
+					 // document.getElementById('output').style.marginTop = ((screen.height)-(document.getElementById('container').style.height)).toString()+"px";
 					  var database = firebase.database().ref('questions');
 
 
@@ -75,6 +75,7 @@ DO NOT LINK THIS PAGE
 					  $('#login').removeClass('hide');
 					  $('#logout').addClass('hide');
 					  console.log('logged out');
+					  $('#output').addClass('hide');
 				  }
 				});
 
