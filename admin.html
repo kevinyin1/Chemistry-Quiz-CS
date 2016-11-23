@@ -1,4 +1,4 @@
-<!-- 
+<!--
 DO NOT LINK THIS PAGE
 -->
 
@@ -11,10 +11,13 @@ DO NOT LINK THIS PAGE
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 			<!-- Link to stylesheets -->
 			<link rel="stylesheet" href="stylesheet/admincss.css">
+			<link rel="stylesheet" href="stylesheet/ionicons.css">
+			<!-- Firebase -->
+			<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+			<script src="javascript/adminauth.js"></script>
 		</head>
 		<body>
-			<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-			<script>
+			<script type="text/javascript">
 				// Initialize Firebase
 				var config = {
 					apiKey: "AIzaSyCtmRFEI7sYJykO0q_l20nl521GRt0U8Vg",
@@ -24,17 +27,71 @@ DO NOT LINK THIS PAGE
 					messagingSenderId: "70741320633"
 				};
 				firebase.initializeApp(config);
+
+				function loginbtn(){
+					//get email and pass value
+					email = document.getElementById('email').value;
+					password = document.getElementById('pass').value;
+					var auth = firebase.auth();
+					if (auth.currentUser) {
+						auth.signOut();
+					} else {
+					//sign in
+						auth.signInWithEmailAndPassword(email, password).catch(function(error){
+							var errorCode = error.code;
+							var errorMsg = error.message;
+							if (errorCode === 'auth/wrong-password'){
+								$("#alert1").fadeIn(1500, function(){
+	            					$("#alert1").fadeOut(1500);
+	        					});
+							}else{
+								$("#alert2").fadeIn(1500, function(){
+	            					$("#alert2").fadeOut(1500);
+	        					});
+							}
+							console.log(errorMsg);
+						});
+				    }
+				};
+
+				function logoutbtn(){
+					firebase.auth().signOut();
+				}
+
+				firebase.auth().onAuthStateChanged(function(user) {
+				  if (user) {
+					  console.log('logged in');
+					  $('#login').addClass('hide');
+					  $('#logout').removeClass('hide');
+					  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+					  document.getElementById('output').innerHTML = '<div class="panel panel-default"><div class="panel-heading">Heading<button onclick="update()" class="btn btn-primary" id="update">Update</button></div><div class="panel-body">A Basic Panel</div></div>';
+					  document.getElementById('output').style.marginTop = ((screen.height)-(document.getElementById('container').style.height)).toString()+"px";
+					  var database = firebase.database().ref('questions');
+
+
+
+
+				  } else {
+					  $('#login').removeClass('hide');
+					  $('#logout').addClass('hide');
+					  console.log('logged out');
+				  }
+				});
+
+
 			</script>
 			<div class="container">
+				<span class="glyp ion-ionic"> </span>
+				<h3>Administrator</h3>
 				<input id="email" placeholder="Email" type="email">
-				<br>
-				<input id="pass" placeholder="Password" type="password">        
-				<br>
-				<button id="loginbtn" class="btn btn-primary">Login</button>
-				<button id="logoutbtn" class="btn btn-secondary">Logout</button>
+				<input id="pass" placeholder="Password" type="password">
+				<button onclick="loginbtn()" id="login" class="btn btn-primary">Login</button>
+				<button onclick="logoutbtn()" id="logout" class="btn btn-secondary hide">Logout</button>
+				<div class="alert alert-danger" id="alert1">Wrong Password!</div>
+				<div class="alert alert-danger" id="alert2">Incorrect!</div>
 			</div>
-		</body>    
-	</html> 
+			<div id="output">
 
-
-
+			</div>
+		</body>
+	</html>
