@@ -63,6 +63,7 @@ DO NOT LINK THIS PAGE
 					  console.log('logged in');
 					  $('#login').addClass('hide');
 					  $('#logout').removeClass('hide');
+					  $('#output').removeClass('hide');
 					  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 					  document.getElementById('output').innerHTML = '<div class="panel panel-default"><div class="panel-heading">Heading<button onclick="update()" class="btn btn-primary" id="update">Update</button></div><div class="panel-body">A Basic Panel</div></div>';
 					 // document.getElementById('output').style.marginTop = ((screen.height)-(document.getElementById('container').style.height)).toString()+"px";
@@ -91,7 +92,7 @@ DO NOT LINK THIS PAGE
 				<div class="alert alert-danger" id="alert1">Wrong Password!</div>
 				<div class="alert alert-danger" id="alert2">Incorrect!</div>
 			</div>
-			<div id="output">
+			<div id="output" class="hide">
 
 			</div>
 		</body>
