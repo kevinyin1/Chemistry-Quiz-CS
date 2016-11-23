@@ -2,7 +2,8 @@
   display: none;
 }
 .btn{
-  border-radius:5px;
+  width:100px;
+  border-radius:3px;
 }  
 .container{
   display:block;
