@@ -4,6 +4,15 @@
 .btn{
   width:100px;
   border-radius:3px;
+  box-shadow:3px 3px 3px #B0C4DE;
+}  
+.btn-primary{
+  background-color:#1E90FF;
+  color:#fff;
+}
+.btn-secondary{
+  background-color:#fff;
+  color:#1E90FF;
 }  
 .container{
   display:block;
