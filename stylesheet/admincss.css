@@ -17,4 +17,7 @@
 .container{
   display:block;
   margin:auto;
+}
+.container input{
+  width:300px; 
 }  
