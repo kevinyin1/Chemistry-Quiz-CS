@@ -27,42 +27,12 @@ DO NOT LINK THIS PAGE
           messagingSenderId: "70741320633"
         };
         firebase.initializeApp(config);
-
-        function login(){
-          var email = document.getElementById('email').value;
-          var pass = document.getElementById('pass').value;
-          const auth = firebase.auth();
-          //signout user
-          if (auth.currentUser){
-            auth.signOut();
-          }else{
-            if (email.length == 0){
-              alert('Please enter a email');
-              return;
-            }  
-            if (pass.length == 0)
-              alert('Please enter a password'); 
-              return;
-            }
-          //login
-          auth.signInWithEmailAndPassword(email,pass).catch(function(error){
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            if (errorCode === 'auth/wrong-password') {
-              alert('Wrong password.');
-            } else {
-              alert(errorMessage);
-            }
-            console.log(error);
-            document.getElementById('loginbtn').disabled = false;
-          });
-          document.getElementById('loginbtn').disabled = true;
-        }  
       </script>
       <div class="container">
-        <input id="email" placeholder="Email">
-        <input id="pass" placeholder="Password" type="password">
-        <button onclick="login()" id="loginbtn">Login</button>
+        <input id="email" placeholder="Email" type="email">
+        <input id="pass" placeholder="Password" type="password">        
+        <button id="loginbtn">Login</button>
+        <button id="logoutbtn">Logout</button>
       </div>
     </body>    
   </html> 
