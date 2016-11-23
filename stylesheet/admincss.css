@@ -1,3 +1,6 @@
 .hide{
   display: none;
 }
+.btn{
+  border-radius:5px;
+}  
