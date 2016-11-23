@@ -2,22 +2,53 @@
   display: none;
 }
 .btn{
-  width:100px;
+  width:300px;
   border-radius:3px;
   box-shadow:3px 3px 3px #B0C4DE;
-}  
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
+}
 .btn-primary{
   background-color:#1E90FF;
   color:#fff;
+  margin-top:5px;
+
 }
 .btn-secondary{
   background-color:#fff !important;
   color:#1E90FF !important;
-}  
+}
 .container{
+  padding-top:12%;
+  width:400px;
   display:block;
   margin:auto;
 }
 .container input{
-  width:300px; 
-}  
+  width:300px;
+  display: block;
+  margin: 5px auto;
+}
+.container h3{
+  text-align: center;
+}
+.glyp{
+  font-size: 100px;
+  display: block;
+  text-align: center;
+}
+.alert{
+    text-align: center;
+    display: none;
+}
+#output{
+    width: 100%;
+}
+#update{
+    width:100px;
+    float:right;
+    margin: 0;
+    padding: 0 5px;
+
+}
