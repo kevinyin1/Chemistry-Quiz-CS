@@ -3,39 +3,36 @@ DO NOT LINK THIS PAGE
 -->
 
 <!doctype html>
-  <html>
-    <head>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      
-      <!-- Link to stylesheets -->
-      <link rel="stylesheet" href="stylesheet/admincss.css">
-    </head>
-    <body>
-      <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-      <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyCtmRFEI7sYJykO0q_l20nl521GRt0U8Vg",
-          authDomain: "csquizproject.firebaseapp.com",
-          databaseURL: "https://csquizproject.firebaseio.com",
-          storageBucket: "csquizproject.appspot.com",
-          messagingSenderId: "70741320633"
-        };
-        firebase.initializeApp(config);
-      </script>
-      <div class="container">
-        <input id="email" placeholder="Email" type="email">
-        <input id="pass" placeholder="Password" type="password">        
-        <button id="loginbtn" class="btn">Login</button>
-        <button id="logoutbtn" class="btn">Logout</button>
-      </div>
-    </body>    
-  </html> 
+	<html>
+		<head>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+			<!-- Link to stylesheets -->
+			<link rel="stylesheet" href="stylesheet/admincss.css">
+		</head>
+		<body>
+			<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+			<script>
+				// Initialize Firebase
+				var config = {
+					apiKey: "AIzaSyCtmRFEI7sYJykO0q_l20nl521GRt0U8Vg",
+					authDomain: "csquizproject.firebaseapp.com",
+					databaseURL: "https://csquizproject.firebaseio.com",
+					storageBucket: "csquizproject.appspot.com",
+					messagingSenderId: "70741320633"
+				};
+				firebase.initializeApp(config);
+			</script>
+			<div class="container">
+				<input id="email" placeholder="Email" type="email">
+				<input id="pass" placeholder="Password" type="password">        
+				<button id="loginbtn" class="btn btn-primary">Login</button>
+				<button id="logoutbtn" class="btn btn-secondary">Logout</button>
+			</div>
+		</body>    
+	</html> 
 
 
 
