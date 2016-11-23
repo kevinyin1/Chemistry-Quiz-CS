@@ -11,8 +11,8 @@
   color:#fff;
 }
 .btn-secondary{
-  background-color:#fff;
-  color:#1E90FF;
+  background-color:#fff !important;
+  color:#1E90FF !important;
 }  
 .container{
   display:block;
