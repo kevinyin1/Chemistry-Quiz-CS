@@ -14,4 +14,7 @@
     height:300px;
     text-align: center;
 }
-.
+.infoBtn{
+    position:fixed;
+    padding-top:50px;
+}    
