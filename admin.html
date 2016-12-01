@@ -113,14 +113,14 @@ DO NOT LINK THIS PAGE
 						 // document.getElementById('output').style.marginTop = ((screen.height)-(document.getElementById('container').style.height)).toString()+"px";
 						  var database = firebase.database().ref('questions');
 							var data, build;
-			   			var myTemplate = $("#quiztemplate").html()
-	           	database.on('value',function(snapshot){
-					   		build = "";
-		          	data = snapshot.val();
-		            for(key in data){
+			   				var myTemplate = $("#quiztemplate").html()
+	           				database.on('value',function(snapshot){
+					   			build = "";
+		          				data = snapshot.val();
+		           				for(key in data){
 									build += Mustache.render(myTemplate,data[key]);
-			            //console.log(data[key]);
-		            }
+			        			    //console.log(data[key]);
+		            			}
 								$("#outputques").html(build);
 							});
 
