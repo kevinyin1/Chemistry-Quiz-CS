@@ -14,9 +14,9 @@
     height:300px;
     text-align: center;
 }
-#infoStuff{
+#infoBtn{
     position:fixed;
-    padding-top:25px;
+    
 }    
 #infoContent img{
     float:left;
