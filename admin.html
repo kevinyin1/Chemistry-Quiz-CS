@@ -29,7 +29,7 @@ DO NOT LINK THIS PAGE
 						<div>b) {{answerB}}</div>
 						<div>c) {{answerC}}</div>
 						<div>d) {{answerD}}</div>
-						<div>e) {{answerE}}</div>
+						<div>e) {{answer}}</div>
 						<div>Hint) {{hint}}</div>
 					  </div>
 					</div>
@@ -83,7 +83,7 @@ DO NOT LINK THIS PAGE
 					var ansB = document.getElementById('ansB').value;
 					var ansC = document.getElementById('ansC').value;
 					var ansD = document.getElementById('ansD').value;
-					var ansE = document.getElementById('ansE').value;
+					var ans = document.getElementById('ans').value;
 					var hint = document.getElementById('hint').value;
 					var imglink = document.getElementById('imagelink').value;
 					console.log('work');
@@ -93,7 +93,7 @@ DO NOT LINK THIS PAGE
 						"answerB":ansB,
 						"answerC":ansC,
 						"answerD":ansD,
-						"answerE":ansE,
+						"answer":ans,
 						"hint":hint,
 						"imglink":imglink
 					});
@@ -159,7 +159,7 @@ DO NOT LINK THIS PAGE
 								Answer Choice B:<input placeholder="Answer B" id="ansB"><br>
 								Answer Choice C:<input placeholder="Answer C" id="ansC"><br>
 								Answer Choice D:<input placeholder="Answer D" id="ansD"><br>
-								Answer Choice E:<input placeholder="Answer E" id="ansE"><br>
+								Answer Choice E:<input placeholder="Answer" id="ans"><br>
 							</div>
 							<div class="col-xs-4">
 								Image Names: <input placeholder="image link" id="imagelink"><br>
