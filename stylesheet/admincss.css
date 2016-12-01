@@ -45,10 +45,20 @@
 #output{
     width: 100%;
 }
-#update{
+#btn{
     width:100px;
     float:right;
     margin: 0;
     padding: 0 5px;
 
+}
+#createpanel{
+  text-align: center;
+}
+#createpanel input{
+  width:350px;
+  margin-top: 5px;
+}
+.textcen{
+  text-align: center;
 }
