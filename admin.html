@@ -15,8 +15,23 @@ DO NOT LINK THIS PAGE
 			<!-- Firebase -->
 			<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 			<script src="javascript/adminauth.js"></script>
+			<script src="javascript/mustache.js"></script>
 		</head>
 		<body>
+			<script id="quiztemplate" type="text/template">
+				<div class="item">
+          <div class="panel panel-default">
+            <div class="panel-heading">{{question}}</div>
+              <div class="panel-body">
+                <div>a) {{answerA}}</div>
+								<div>b) {{answerB}}</div>
+								<div>c) {{answerC}}</div>
+								<div>d) {{answerD}}</div>
+								<div>e) {{answerE}}</div>
+								<div>Hint) {{hint}}</div>
+          </div>
+        </div>
+			</script>
 			<script type="text/javascript">
 				// Initialize Firebase
 				var config = {
@@ -57,29 +72,92 @@ DO NOT LINK THIS PAGE
 				function logoutbtn(){
 					firebase.auth().signOut();
 				}
+//creating questions
+				function create(){
+					var database = firebase.database().ref('questions');
+					var question = document.getElementById('ques').value;
+					var ansA = document.getElementById('ansA').value;
+					var ansB = document.getElementById('ansB').value;
+					var ansC = document.getElementById('ansC').value;
+					var ansD = document.getElementById('ansD').value;
+					var ansE = document.getElementById('ansE').value;
+					var hint = document.getElementById('hint').value;
+					console.log('work');
+					database.push({
+						"question":question,
+						"answerA":ansA,
+						"answerB":ansB,
+						"answerC":ansC,
+						"answerD":ansD,
+						"answerE":ansE,
+						"hint":hint
+					});
+				}
+//uploading files
+			/*	var storageRef = firebase.storage().ref();
+					function handleFileSelect(upload) {
+					upload.stopPropagation();
+					upload.preventDefault();
+					var file = upload.target.files[0];
+					var metadata = {
+						'contentType': file.type
+					};
+					// Push to child path.
+					// [START oncomplete]
+					storageRef.child('images/' + file.name).put(file, metadata).then(function(snapshot) {
+						console.log('Uploaded', snapshot.totalBytes, 'bytes.');
+						console.log(snapshot.metadata);
+						var url = snapshot.metadata.downloadURLs[0];
+						console.log('File available at', url);
+						// [START_EXCLUDE]
+						document.getElementById('link').innerHTML = '<a href="' +  url + '">Click For File</a>';
+						// [END_EXCLUDE]
+					}).catch(function(error) {
+						// [START onfailure]
+						console.error('Upload failed:', error);
+						// [END onfailure]
+					});
+						// [END oncomplete]
+				}
+				window.onload = function() {
+					document.getElementById('file').addEventListener('change', handleFileSelect, false);
+					document.getElementById('file').disabled = true;
 
-				firebase.auth().onAuthStateChanged(function(user) {
-				  if (user) {
-					  console.log('logged in');
-					  $('#login').addClass('hide');
-					  $('#logout').removeClass('hide');
-					  $('#output').removeClass('hide');
-					  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-					  document.getElementById('output').innerHTML = '<div class="panel panel-default"><div class="panel-heading">Heading<button onclick="update()" class="btn btn-primary" id="update">Update</button></div><div class="panel-body">A Basic Panel</div></div>';
-					 // document.getElementById('output').style.marginTop = ((screen.height)-(document.getElementById('container').style.height)).toString()+"px";
-					  var database = firebase.database().ref('questions');
+*/
+
+					firebase.auth().onAuthStateChanged(function(user) {
+					  if (user) {
+						  console.log('logged in');
+						  $('#login').addClass('hide');
+						  $('#logout').removeClass('hide');
+						  $('#output').removeClass('hide');
+						//	document.getElementById('file').disabled = false;
+						  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+						  //document.getElementById('output').innerHTML = '<div class="panel panel-default"><div class="panel-heading">Heading<button onclick="update()" class="btn btn-primary" id="update">Update</button></div><div class="panel-body">A Basic Panel</div></div>';
+						 // document.getElementById('output').style.marginTop = ((screen.height)-(document.getElementById('container').style.height)).toString()+"px";
+						  var database = firebase.database().ref('questions');
+							var data, build;
+			   			var myTemplate = $("#quiztemplate").html()
+	           	database.on('value',function(snapshot){
+					   		build = "";
+		          	data = snapshot.val();
+		            for(key in data){
+									build += Mustache.render(myTemplate,data[key]);
+			            //console.log(data[key]);
+		            }
+								$("#outputques").html(build);
+							});
 
 
 
-
-				  } else {
-					  $('#login').removeClass('hide');
-					  $('#logout').addClass('hide');
-					  console.log('logged out');
-					  $('#output').addClass('hide');
-				  }
-				});
-
+					  } else {
+						  $('#login').removeClass('hide');
+						  $('#logout').addClass('hide');
+						  console.log('logged out');
+						  $('#output').addClass('hide');
+					  }
+					});
+				}
 
 			</script>
 			<div class="container">
@@ -93,7 +171,35 @@ DO NOT LINK THIS PAGE
 				<div class="alert alert-danger" id="alert2">Incorrect!</div>
 			</div>
 			<div id="output" class="hide">
+				<div class="panel panel-default">
+					<div class="panel-heading">Create a question<button onclick="create()" class="btn btn-primary" id="btn">Create</button></div>
+					<div class="panel-body">
+						<div id="createpanel">
+							<div class="col-xs-4">
+								Question: <input placeholder="Question" id="ques" style="width:350px;"><br>
+								Hint: <input placeholder="Hint" id="hint"><br>
+							</div>
+							<div class="col-xs-4">
+								Answer Choice A:<input placeholder="Answer A" id="ansA"><br>
+								Answer Choice B:<input placeholder="Answer B" id="ansB"><br>
+								Answer Choice C:<input placeholder="Answer C" id="ansC"><br>
+								Answer Choice D:<input placeholder="Answer D" id="ansD"><br>
+								Answer Choice E:<input placeholder="Answer E" id="ansE"><br>
+							</div>
+							<div class="col-xs-4">
+								Choose a file
+								<input id="file" type="file" name="file">
+								<div id="link"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">List of Questions</div>
+					<div class="panel-body" id="outputques">
 
+					</div>
+				</div>
 			</div>
 		</body>
 	</html>
