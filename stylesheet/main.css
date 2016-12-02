@@ -39,7 +39,7 @@ body{
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
 }
-#infoBtn{
+.infoBtn{
     position:fixed;
     padding-top:50px;
 }
