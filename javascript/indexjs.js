@@ -1,4 +1,5 @@
 window.addEventListener('load',function(){
+    $('#cover').css('background-size',screen.width + 'px');
     $('#cover').css('min-height',screen.height + 'px');
     console.log(screen.width + 'px');
 //flip
