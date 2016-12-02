@@ -1,7 +1,8 @@
 window.addEventListener('load',function(){
+    console.log(screen.width + 'px');
     $('#cover').css('background-size',screen.width + 'px');
     $('#cover').css('min-height',screen.height + 'px');
-    console.log(screen.width + 'px');
+    console.log(screen.height + 'px');
 //flip
     $("#topic1").flip({
         axis: 'y',
