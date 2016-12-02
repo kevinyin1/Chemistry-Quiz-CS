@@ -22,6 +22,9 @@
 #infoContent{
     padding-top:50px;
 }
+#infoContent button{
+    width:100%
+}
 #infoBtn{
     position:fixed;
     padding-top:50px;
