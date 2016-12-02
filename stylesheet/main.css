@@ -39,8 +39,10 @@ body{
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
 }
-
-
+#Btn{
+ width:100%;   
+ border-radius: 3px;
+ box-shadow: -6px 0 #9b9fa5;
 }
 .cover{
   background-image: url("../images/Background.png");
