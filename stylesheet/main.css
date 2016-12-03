@@ -1,3 +1,16 @@
+
+.navbar{
+    height:50px;
+    width:100%;
+    margin:0;
+    border-radius: 0;
+}
+.navbar-inverse .navbar-brand {
+    color: #d8d8d8;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #D8D8D8 ;
+}
 .Btn{
      width:100%;   
      border-radius: 3px;
@@ -13,20 +26,6 @@
 .row{
     margin:50px;
 }
-.navbar{
-    height:50px;
-    width:100%;
-    margin:0;
-    border-radius: 0;
-}
-.navbar-inverse .navbar-brand {
-    color: #d8d8d8;
-}
-.navbar-inverse .navbar-nav>li>a {
-    color: #D8D8D8 ;
-}
-
-
 .content{
     margin-top: 20px;
     height:600px;
@@ -40,7 +39,6 @@
     height:300px;
     text-align: center;
 }
-
 .front{
     color:#3FAFEF;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
@@ -51,8 +49,6 @@
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
 }
-
-
 .cover{
   background-image: url("../images/Background.png");
   width:100%;
