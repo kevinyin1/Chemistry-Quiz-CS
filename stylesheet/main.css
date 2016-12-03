@@ -10,6 +10,9 @@
 .navbar-inverse .navbar-nav>li>a {
     color: #D8D8D8 ;
 }
+.row{
+    margin:50px;
+}
 .content{
     margin-top: 20px;
     height:600px;
@@ -23,9 +26,7 @@
     height:300px;
     text-align: center;
 }
-.row{
-    margin:50px;
-}
+
 .front{
     color:#3FAFEF;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
