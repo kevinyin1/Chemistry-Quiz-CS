@@ -10,6 +10,18 @@
 .navbar-inverse .navbar-nav>li>a {
     color: #D8D8D8 ;
 }
+.Btn{
+     width:100%;   
+     border-radius: 3px;
+     box-shadow: -6px 0 #05347f;
+     background: #3884ff;
+     padding:20px 10px;
+     color:white;
+     margin:0px 1px 1px 7px;
+     font-size:15px;
+     border:none;
+     font-weight:bold;
+}
 .row{
     margin:50px;
 }
@@ -37,18 +49,7 @@
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
 }
-.Btn{
-     width:100%;   
-     border-radius: 3px;
-     box-shadow: -6px 0 #05347f;
-     background: #3884ff;
-     padding:20px 10px;
-     color:white;
-     margin:0px 1px 1px 7px;
-     font-size:15px;
-     border:none;
-     font-weight:bold;
-}
+
 
 .cover{
   background-image: url("../images/Background.png");
