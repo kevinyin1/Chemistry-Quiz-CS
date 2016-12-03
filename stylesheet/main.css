@@ -18,13 +18,13 @@
     margin-bottom:10px;
     color:#3FAFEF;
 }
-.row{
-    margin:50px;
-}
 .section2{
     margin-left: 6%;
     height:300px;
     text-align: center;
+}
+.row{
+    margin:50px;
 }
 .front{
     color:#3FAFEF;
