@@ -24,10 +24,7 @@
      border:none;
      font-weight:bold;
 }
-#infoBtn{
-    display:block;
-    position:fixed;
-}
+
 .row{
     margin:50px;
 }
