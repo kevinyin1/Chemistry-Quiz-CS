@@ -56,19 +56,17 @@
                 <div class="panel panel-default">
                 <div class="panel-heading">{{question}}</div>
                   <div class="panel-body">
-                  <img href="{{imglink}}" alt="imglink" style="float:left;width:400px;">
-                  <div style="float:left;width:400px">
-                  <div>a) {{answerA}}</div>
-                  <div>b) {{answerB}}</div>
-                  <div>c) {{answerC}}</div>
-                  <div>d) {{answerD}}</div>
-                  <div>Answer:  {{answer}}</div>
-                  <div>Hint: {{hint}}</div>
-                  <div>Category: {{category}}</div> 
-                  </div>
+                    <form>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerA}}" checked>a) {{answerA}}<br>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerB}}">b) {{answerB}}<br>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerC}}">c) {{answerC}}<br>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerD}}">d) {{answerD}}<br>
+                      Hint: {{hint}}</div>
+                    </form>
                 </div>
                </div>
             </script>
+            <script src="javascript/mustache.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
             <script type="text/javascript">
               // Initialize Firebase
@@ -87,15 +85,17 @@
 		build = "";
 		data = snapshot.val();
 		for(key in data){
-                        
+
 		//build += Mustache.render(myTemplate,data[key]);
-		if (data[key] == "Atomic Structure")	
+	if (data[key].category == "Atomic Structure"){
 			console.log(data[key]);
+      build += Mustache.render(myTemplate,data[key]);
+    }
 		 }
 		$("#output").html(build);
 		});
-            </script> 
-          <div id="output">
+            </script>
+          <div id="output" style="margin-top:60px;">
 
           </div>
         <a href="#top"><span class="scrollup glyphicon glyphicon-chevron-up"></span></a>
