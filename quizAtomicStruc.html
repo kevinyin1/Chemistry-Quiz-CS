@@ -69,6 +69,7 @@
                 </div>
                </div>
             </script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
             <script type="text/javascript">
               // Initialize Firebase
               var config = {
@@ -80,18 +81,18 @@
               };
               firebase.initializeApp(config);
                var database = firebase.database().ref('questions');
-						  	var data, build;
-			   				var myTemplate = $("#quiztemplate").html()
-	           				database.on('value',function(snapshot){
-					   			build = "";
-		          				data = snapshot.val();
-		           				for(key in data){
+		var data, build;
+		var myTemplate = $("#quiztemplate").html()
+	           database.on('value',function(snapshot){
+		build = "";
+		data = snapshot.val();
+		for(key in data){
                         
-									//build += Mustache.render(myTemplate,data[key]);
-			        			    console.log(data[key]);
-		            			}
-								$("#output").html(build);
-							});
+		//build += Mustache.render(myTemplate,data[key]);
+		console.log(data[key]);
+		 }
+		$("#output").html(build);
+		});
             </script> 
           <div id="output">
 
