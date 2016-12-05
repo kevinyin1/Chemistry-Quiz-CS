@@ -15,13 +15,13 @@
     margin:50px;
 }
 .Btn{
-        
+     width:100%;
      border-radius: 3px;
      box-shadow: -6px 0 #05347f;
      background: #3884ff;
      padding:20px 10px;
      color:white;
-     margin:0px 1px 1px 7px;
+     margin:0px 1px 1px -50px!important;
      font-size:15px;
      border:none;
      font-weight:bold;
