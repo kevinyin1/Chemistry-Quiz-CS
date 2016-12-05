@@ -11,6 +11,9 @@
 .navbar-inverse .navbar-nav>li>a {
     color: #D8D8D8 ;
 }
+.row{
+    margin:50px;
+}
 .Btn{
         
      border-radius: 3px;
@@ -23,9 +26,7 @@
      border:none;
      font-weight:bold;
 }
-.row{
-    margin:50px;
-}
+
 .content{
     margin-top: 20px;
     height:600px;
