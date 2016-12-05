@@ -51,8 +51,51 @@
                    </div>
                </div>
             </div>
+            <script id="quiztemplate" type="text/template">
+              <div class="item">
+                <div class="panel panel-default">
+                <div class="panel-heading">{{question}}</div>
+                  <div class="panel-body">
+                  <img href="{{imglink}}" alt="imglink" style="float:left;width:400px;">
+                  <div style="float:left;width:400px">
+                  <div>a) {{answerA}}</div>
+                  <div>b) {{answerB}}</div>
+                  <div>c) {{answerC}}</div>
+                  <div>d) {{answerD}}</div>
+                  <div>Answer:  {{answer}}</div>
+                  <div>Hint: {{hint}}</div>
+                  <div>Category: {{category}}</div> 
+                  </div>
+                </div>
+               </div>
+            </script>
+            <script type="text/javascript">
+              // Initialize Firebase
+              var config = {
+                apiKey: "AIzaSyCtmRFEI7sYJykO0q_l20nl521GRt0U8Vg",
+                authDomain: "csquizproject.firebaseapp.com",
+                databaseURL: "https://csquizproject.firebaseio.com",
+                storageBucket: "csquizproject.appspot.com",
+                messagingSenderId: "70741320633"
+              };
+              firebase.initializeApp(config);
+               var database = firebase.database().ref('questions');
+						  	var data, build;
+			   				var myTemplate = $("#quiztemplate").html()
+	           				database.on('value',function(snapshot){
+					   			build = "";
+		          				data = snapshot.val();
+		           				for(key in data){
+                        
+									//build += Mustache.render(myTemplate,data[key]);
+			        			    console.log(data[key]);
+		            			}
+								$("#output").html(build);
+							});
+            </script> 
+          <div id="output">
 
-
+          </div>
         <a href="#top"><span class="scrollup glyphicon glyphicon-chevron-up"></span></a>
         </body>
 </html>
