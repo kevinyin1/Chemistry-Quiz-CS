@@ -30,7 +30,8 @@ DO NOT LINK THIS PAGE
 						<div>c) {{answerC}}</div>
 						<div>d) {{answerD}}</div>
 						<div>Answer:  {{answer}}</div>
-						<div>Hint) {{hint}}</div>
+						<div>Hint: {{hint}}</div>
+						<div>Category: {{category}}</div> 
 					  </div>
 					</div>
 				 </div>
@@ -86,6 +87,7 @@ DO NOT LINK THIS PAGE
 					var ans = document.getElementById('ans').value;
 					var hint = document.getElementById('hint').value;
 					var imglink = document.getElementById('imagelink').value;
+					var category = document.getElementById('category').value;
 					console.log('work');
 					database.push({
 						"question":question,
@@ -95,7 +97,8 @@ DO NOT LINK THIS PAGE
 						"answerD":ansD,
 						"answer":ans,
 						"hint":hint,
-						"imglink":imglink
+						"imglink":imglink,
+						"category":category
 					});
 				}
 
@@ -162,6 +165,7 @@ DO NOT LINK THIS PAGE
 								Answer:<input placeholder="Answer" id="ans"><br>
 							</div>
 							<div class="col-xs-4">
+								Category: <input placeholder="Category" id="category"><br>
 								Image Names: <input placeholder="image link" id="imagelink"><br>
 								Hint: <input placeholder="Hint" id="hint"><br>
 							</div>
