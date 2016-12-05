@@ -13,6 +13,7 @@
       <!-- Link to stylesheets -->
       <link rel="stylesheet" href="stylesheet/main.css">
       <link rel="stylesheet" href="stylesheet/ionicons.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
 
 
@@ -94,7 +95,57 @@
             <div class="content col-md-12">
                 <img src= "images//Logo.png">
             </div>
-            <div class="row">
+            <div class="col-xs-3">
+                      <div class="animated bounceInDown" id="box">
+                        <img src = "images//Atomic Structure.png" width="100px" style="float: center">
+                        <img src = "images//1.png" width="100px">
+                        The <b>atomic number</b> is the number of protons in the nucleus of an atom
+                        <a href="info.html">Click here for more information</a>
+                      </div>
+                      <div class="animated bounceInLeft" id="box">
+                        <img src = "images//AtomicStructure.png" width="100px">
+                        <img src = "images//2.png" width="100px">
+                        The <b>atomic structure</b> of an atom refers to the modern atomic model
+                        <a href="info.html">Click here for more information</a>
+                      </div>
+                      <div class="animated bounceInUp" id="box">
+                        <img src = "images//Group Names.png" width="100px">
+                        <img src = "images//3.png" width="100px">
+                        The <b>Groups</b> of the periodic table are arranged in a special order that relates to an elements checial properties
+                        <a href="info.html">Click here for more information</a>
+                      </div>
+                  </div>
+                  <div class="col-xs-6">
+                      <div class="content animated fadeInDown">
+                          Ionic Four
+                      </div>
+                  </div>
+                  <div class="col-xs-3">
+                      <div class="animated bounceInDown" id="box">
+                        <img src = "images//Metals and Non-Metals.png" width="100px">
+                        <img src = "images//4.png" width="100px">
+                        <b>Metals, metalloids, and non-metals</b> compose the entire periodic table. Each of them has their own unique properties.
+                        <a href="info.html">Click here for more information</a>
+                      </div>
+                      <div class="animated bounceInRight" id="box">
+                        <img src = "images//Periodicity.png" width="100px">
+                        <img src = "images//5.png" width="100px">
+                        <b>Periodicty</b> refers to the noticeable trends taht occur in the periodic table.
+                         <a href="info.html">Click here for more information</a>
+                      </div>
+                      <div class="animated bounceInUp" id="box">
+                        <img src = "images//Bonding.png" width="100px">
+                        <img src = "images//6.png" width="100px">
+                        <b>Bonding</b> occurs between almost all elements and make up simple daily reactions that occur in everyday life.
+                        <a href="info.html">Click here for more information</a>
+                      </div>
+                  </div>
+                  <script>
+                      $('#box').css('height',((screen.height-90)/3 + 'px'));
+                      console.log((screen.height-90)/3);
+                    
+                  </script>
+           <!-- <div class="row">
                 <div class="col-md-3 section2" id="topic1">
                     <div class="front">
                         <img src = "images//Atomic Structure.png" width = 100%; style = "float: center">
@@ -157,6 +208,7 @@
                       <a href="info.html">Click here for more information</a>
                     </div>
                 </div>
+-->
             </div>
         </div>
         <a href="#top"><span class="scrollup glyphicon glyphicon-chevron-up"></span></a>
