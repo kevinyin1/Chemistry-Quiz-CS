@@ -24,7 +24,7 @@
      border:none;
      font-weight:bold;
 }
-#infoBtn input{
+#infoBtn{
     display:block;
     position:fixed;
 }
