@@ -89,7 +89,8 @@
 		for(key in data){
                         
 		//build += Mustache.render(myTemplate,data[key]);
-		console.log(data[key]);
+		if (data[key] == "Atomic Structure")	
+			console.log(data[key]);
 		 }
 		$("#output").html(build);
 		});
