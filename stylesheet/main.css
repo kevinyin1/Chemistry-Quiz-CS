@@ -24,7 +24,13 @@
      border:none;
      font-weight:bold;
 }
-
+.bnr{
+    width:100%;
+}
+.indexImg{
+    float:left;
+    margin:3px;
+}
 .row{
     margin:50px;
 }
