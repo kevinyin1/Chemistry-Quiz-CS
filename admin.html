@@ -87,12 +87,12 @@ DO NOT LINK THIS PAGE
 					database.on('value',function(snapshot){
 						data = snapshot.val();
 						console.log('hi');
-						console.log(data[key].question == ques);
-						console.log(data[key].answer == ans);
-						console.log(data[key].question + data[key].answer);
+						var count=0;
 						for(key in data){
-							if(data[key].question == (ques) && data[key].answer == (ans))
+							if(data[key].question == ques && data[key].answer == ans && count == 0){
+								count++;
 								database.child(key).remove();
+							}
 						}
 					});
 
