@@ -1,3 +1,6 @@
+
+<!-- KEVIN WAS HERE -->
+
 <!doctype html>
   <html>
     <head>
@@ -56,7 +59,7 @@
 
      <div class="row">
         <!-- Scroll buttons -->
-        <div class="col-sm-2">
+        <div class="col-sm-2" style="display:fixed;">
 
               <input type="button" onclick="location.href='#topic1';" value="Atomic Structure" class="Btn col-xs-12"/>
               <input type="button" onclick="location.href='#topic2';" value="Periodicity" class="Btn col-xs-12"/>
@@ -366,4 +369,18 @@ From left to right in the periodic table, the nonmetals can be subdivided into t
          <a href="#top"><span class="scrollup glyphicon glyphicon-chevron-up"></span></a>
      </div>
     </body>
+    <script>
+		$('a[href^="#"]').on('click', function(event) {
+
+		   var target = $(this.getAttribute('href'));
+
+		   if( target.length ) {
+			   event.preventDefault();
+			   $('html, body').stop().animate({
+				   scrollTop: target.offset().top
+			   }, 1000);
+		   }
+
+		});
+	</script>		  
   </html>
