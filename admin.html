@@ -80,7 +80,7 @@ DO NOT LINK THIS PAGE
 				}
 
 
-			/*	function deletebtn(){
+				function deletebtn(){
 					var database = firebase.database().ref('questions');
 					ques = document.getElementById('delquestion').value;
 				 	ans = document.getElementById('delanswer').value;
@@ -92,12 +92,12 @@ DO NOT LINK THIS PAGE
 						console.log(data[key].question + data[key].answer);
 						for(key in data){
 							if(data[key].question == (ques) && data[key].answer == (ans))
-								key.remove();
+								database.child(key).remove();
 						}
 					});
 
 
-				}*/
+				}
 //creating questions
 				function create(){
 					var database = firebase.database().ref('questions');
