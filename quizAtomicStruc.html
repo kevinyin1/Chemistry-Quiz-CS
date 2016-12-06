@@ -5,12 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Ionic Four</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <!-- Latest compiled and minified CSS -->
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-      <!-- Latest compiled and minified JavaScript -->
+
+      <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      <!-- Link to stylesheets -->
+
       <link rel="stylesheet" href="stylesheet/main.css">
       <link rel="stylesheet" href="stylesheet/ionicons.css">
   </head>
@@ -52,48 +53,29 @@
                </div>
             </div>
             <script id="quiztemplate" type="text/template">
+                <style>
+                    .panel{
+                        width:500px;
+                    }
+
+                </style>
               <div class="item">
                 <div class="panel panel-default">
                 <div class="panel-heading">{{question}}</div>
                   <div class="panel-body">
                     <form>
-                      <input type="radio" id="answer" name="{{category}}" value="{{answerA}}" checked>a) {{answerA}}<br>
-                      <input type="radio" id="answer" name="{{category}}" value="{{answerB}}">b) {{answerB}}<br>
-                      <input type="radio" id="answer" name="{{category}}" value="{{answerC}}">c) {{answerC}}<br>
-                      <input type="radio" id="answer" name="{{category}}" value="{{answerD}}">d) {{answerD}}<br>
-                      Hint: {{hint}}</div>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerA}}"> A) {{answerA}}<br>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerB}}"> B) {{answerB}}<br>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerC}}"> C) {{answerC}}<br>
+                      <input type="radio" id="answer" name="{{category}}" value="{{answerD}}"> D) {{answerD}}<br>
                     </form>
                 </div>
                </div>
             </script>
             <script src="javascript/mustache.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+		    <script src="javascript/firebasescript.js"></script>
             <script type="text/javascript">
-              // Initialize Firebase
-              var config = {
-                apiKey: "AIzaSyCtmRFEI7sYJykO0q_l20nl521GRt0U8Vg",
-                authDomain: "csquizproject.firebaseapp.com",
-                databaseURL: "https://csquizproject.firebaseio.com",
-                storageBucket: "csquizproject.appspot.com",
-                messagingSenderId: "70741320633"
-              };
-              firebase.initializeApp(config);
-               var database = firebase.database().ref('questions');
-		var data, build;
-		var myTemplate = $("#quiztemplate").html()
-	           database.on('value',function(snapshot){
-		build = "";
-		data = snapshot.val();
-		for(key in data){
-
-		//build += Mustache.render(myTemplate,data[key]);
-	if (data[key].category == "Atomic Structure"){
-			console.log(data[key]);
-      build += Mustache.render(myTemplate,data[key]);
-    }
-		 }
-		$("#output").html(build);
-		});
+                loadques('quiztemplate','Atomic Structure','output')
             </script>
           <div id="output" style="margin-top:60px;">
 
