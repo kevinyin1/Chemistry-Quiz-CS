@@ -72,3 +72,11 @@
     left: 94%;
     padding-left: 3px;
 }
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 15px;
+}
+table{
+    float: center   
+}
