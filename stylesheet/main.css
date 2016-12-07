@@ -24,11 +24,11 @@
      border:none;
      font-weight:bold;
 }
-#table{
-    background-image:url("images/Background.png");
+.table{
+    "background-image:url('images/Background.png');
     background-size:95%;
     height:1000px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;"
 }
 .indexImg{
     width:100px;
