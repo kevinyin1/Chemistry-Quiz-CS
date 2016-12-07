@@ -25,7 +25,7 @@
      font-weight:bold;
 }
 .table{
-    background-image:url("images/Background.png");
+    background-image:url('images/Background.png');
     
 }
 .indexImg{
