@@ -80,3 +80,7 @@
     left: 94%;
     padding-left: 3px;
 }
+#output{
+ display: block;
+ margin:0 auto;
+}    
