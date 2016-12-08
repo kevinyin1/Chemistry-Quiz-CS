@@ -56,11 +56,13 @@
     color:#3FAFEF;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
+    background-color:white;
 }
 .back{
     color:#3FAFEF;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
+    background-color:white;
 }
 .cover{
   background-image: url("../images/Background.png");
@@ -68,6 +70,7 @@
   min-height:700px;
   background-repeat: no-repeat;
   background-size: 1440px;
+  
 }
 .scrollup{
     position: absolute;
