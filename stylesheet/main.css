@@ -53,13 +53,13 @@
     text-align: center;
 }
 .front{
-    color:#3FAFEF;
+    color:#000000;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
     background-color:white;
 }
 .back{
-    color:#3FAFEF;
+    color:#000000;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
     background-color:white;
