@@ -86,4 +86,7 @@
 #output{
  display: block;
  margin:0 auto;
-}    
+}
+#cover{
+    background-image:url("Home background.jpg");
+}
