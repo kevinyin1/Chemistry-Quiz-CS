@@ -50,35 +50,16 @@
                           <li><a href="about.html"><span class="glyphicon glyphicon-log-in"></span> About</a></li>
                         </ul>
                    </div>
-                   <script id="quiztemplate" type="text/template">
-                       <style>
-                           .panel{
-                               width:500px;
-                           }
-
-                       </style>
-                     <div class="item">
-                       <div class="panel panel-default">
-                       <div class="panel-heading">Q: {{question}}</div>
-                         <div class="panel-body">
-                           <form>
-                             <input type="radio" id="answer" name="{{category}}" value="{{answerA}}"> A) {{answerA}}<br>
-                             <input type="radio" id="answer" name="{{category}}" value="{{answerB}}"> B) {{answerB}}<br>
-                             <input type="radio" id="answer" name="{{category}}" value="{{answerC}}"> C) {{answerC}}<br>
-                             <input type="radio" id="answer" name="{{category}}" value="{{answerD}}"> D) {{answerD}}<br>
-                           </form>
-                       </div>
-                      </div>
-                   </script>
                    <script src="javascript/mustache.js"></script>
                    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
        		         <script src="javascript/firebasescript.js"></script>
                    <script type="text/javascript">
-                       loadques('quiztemplate','Group Names','output')
+                       loadques('Group Names','output')
                    </script>
-                 <div id="output" style="margin-top:60px;">
+                 <div id="output" style="margin-top:10px;">
 
                  </div>
+                 <button onclick="grade()">Grade</button>
                </div>
             </div>
 
