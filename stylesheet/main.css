@@ -29,7 +29,7 @@
 }
 .table{
     background-image:url('images/Background.png');
-    
+
 }
 .indexImg{
     width:100px;
@@ -53,16 +53,14 @@
     text-align: center;
 }
 .front{
-    color:#000000;
+    color:#3FAFEF;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
-    background-color:white;
 }
 .back{
-    color:#000000;
+    color:#3FAFEF;
     box-shadow: 0.5px 0.5px 0.5px 2px #3FAFEF;
     border-radius: 3px;
-    background-color:white;
 }
 .cover{
   background-image: url("../images/Background.png");
@@ -70,7 +68,6 @@
   min-height:700px;
   background-repeat: no-repeat;
   background-size: 1440px;
-  
 }
 .scrollup{
     position: absolute;
@@ -89,4 +86,56 @@
 #output{
  display: block;
  margin:0 auto;
+}
+
+.panel{
+    width:330px;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalbuild{
+    text-align: center;
+}
+#correct{
+    color:green;
+    text-decoration: underline;
+}
+#incorrect{
+    color:red;
+    text-decoration: underline;
 }
