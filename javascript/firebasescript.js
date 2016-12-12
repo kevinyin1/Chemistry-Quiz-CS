@@ -52,17 +52,14 @@ function loadques(categoryname,output){
                for(x in corques){
                    if(corques[x].key == key){
                     buildcor+= Mustache.render(template,{data:data[key], userans:corques[x].userans});
-                    console.log('hi');
                   }
                }
-               console.log();
                for(y in incorques){
                    if(incorques[y].key == key){
                     buildincor+= Mustache.render(template,{data:data[key], userans:incorques[y].userans});
                   }
                }
            }
-       console.log(buildcor);
        });
        $('.modalbuild').html('<h2 id="correct">Number Of Correct: '+cor+'</h2><div class="buildcor"></div><br><h2 id="incorrect">Number Of Incorrect: '+incor+'</h2><div class="buildincor"></div>');
        $('.buildcor').html(buildcor);
