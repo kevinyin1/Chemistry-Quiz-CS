@@ -61,7 +61,7 @@ function loadques(categoryname,output){
                }
            }
        });
-       $('.modalbuild').html('<div class="col-xs-6 style="text-align:none;"><h2 id="correct">Number Of Correct: '+cor+'</h2><div class="buildcor"></div></div><br><div class="col-xs-6" style="text-align:none;"><h2 id="incorrect">Number Of Incorrect: '+incor+'</h2><div class="buildincor"></div></div>');
+       $('.modalbuild').html('<h2 id="correct">Number Of Correct: '+cor+'</h2><div class="buildcor"></div><br><h2 id="incorrect">Number Of Incorrect: '+incor+'</h2><div class="buildincor"></div>');
        $('.buildcor').html(buildcor);
        $('.buildincor').html(buildincor);
        modal.style.display = "block";
