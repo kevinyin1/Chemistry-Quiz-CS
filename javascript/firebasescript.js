@@ -44,7 +44,7 @@ function loadques(categoryname,output){
             console.log('ji');
         }*/
        }
-       template = 'Question: {{data.question}}<br>Your Answer: {{userans}}<br>Correct Answer: {{data.answer}}<br><br>';
+       template = '<b>Question:</b> {{data.question}}<br><b>Your Answer:</b> {{userans}}<br><b>Correct Answer:</b> {{data.answer}}<br><br>';
        var buildcor='',buildincor='';
        database.on('value',function(snapshot){
            data = snapshot.val();
